@@ -348,6 +348,8 @@ public class UIAnimationEditor : Editor {
 				EditorGUI.indentLevel -= 2;
 				#endregion
 
+				EditorGUI.indentLevel += 2;
+
 				EditorGUILayout.PropertyField (
 					serializedObject.
 					FindProperty("UIAnimationPhase").
@@ -355,6 +357,8 @@ public class UIAnimationEditor : Editor {
 					FindPropertyRelative("UIElements"),
 					true
 				);
+
+				EditorGUI.indentLevel -= 2;
 			}
 		}
 		EditorGUI.indentLevel -= 2;
